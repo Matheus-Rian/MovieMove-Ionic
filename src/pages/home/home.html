@@ -1,14 +1,57 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-toolbar color="primary">
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+
+    <div class="container">
+        <form [formGroup]="buscarFilmes">
+            <ion-item>
+                <ion-input [formControl]="buscarFilmes.controls['filme']" placeholder="Pesquise filmes aqui"></ion-input>
+            </ion-item>
+        </form>
+    </div>
+    <div class="buttonPesquisa">
+        <button type="submit">
+      <ion-icon name="search-outline"></ion-icon>
+    </button>
+    </div>
+
+    <div class="movieRowList">
+        <h2>Recomendados</h2>
+        <!-- paginationClickable="true" -->
+        <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" #mySlider>
+            <ion-slide *ngFor="let item of recomendados">
+                <div class="movieImgRecomendado">
+                    <img src="{{item.urlFoto}}" />
+                </div>
+                <ion-item class="titleMovieRecomendado" no-lines>
+                    {{item.titulo}}
+                </ion-item>
+                <ion-item class="genreMovieRecomendado" no-lines>
+                    {{item.genero}}
+                </ion-item>
+            </ion-slide>
+        </ion-slides>
+
+        <h2>Em alta</h2>
+        <!-- paginationClickable="true" -->
+        <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" #mySlider>
+            <ion-slide *ngFor="let item of filmes">
+                <div class="movieImgGeral">
+                    <img src="{{item.urlFoto}}" />
+                </div>
+                <ion-item class="titleMovieGeral" no-lines> {{item.titulo}} </ion-item>
+                <ion-item class="genreMovieGeral" no-lines> {{item.genero}} </ion-item>
+            </ion-slide>
+        </ion-slides>
+    </div>
 </ion-content>

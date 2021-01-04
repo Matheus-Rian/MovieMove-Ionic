@@ -1,4 +1,43 @@
 // http://ionicframework.com/docs/theming/
+.movieImgGeral {
+    width: 170px;
+    height: 250px;
+
+    img { 
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 25px;
+    }
+
+}
+
+.genreMovieGeral {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: -18px;
+    margin-left: -8px;
+    color: #8ca4d2;
+}
+
+.titleMovieGeral {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-left: -8px;
+    color: #1c4384;
+}
+
+h2 {
+    margin: 8px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #1c4384;
+    font-weight: 700;
+}
+
 
 
 // App Global Sass

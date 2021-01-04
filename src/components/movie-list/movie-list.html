@@ -1,0 +1,20 @@
+Generated template for the MovieListComponent component
+<div>
+  <h2>Em alta</h2>
+  <!-- paginationClickable="true" -->
+  <ion-slides
+    initialSlide="0"
+    slidesPerView="1.6"
+    freeMode="true"
+    speed="1000"
+    #mySlider
+  >
+    <ion-slide *ngFor="let item of filmes">
+      <div class="movieImgGeral">
+        <img src="{{item.urlFoto}}" />
+      </div>
+      <ion-item class="titleMovieGeral" no-lines> {{item.titulo}} </ion-item>
+      <ion-item class="genreMovieGeral" no-lines> {{item.genero}} </ion-item>
+    </ion-slide>
+  </ion-slides>
+</div>

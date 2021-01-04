@@ -1,3 +1,68 @@
-page-home {
+.container {
+    display: flex;
+    float: left;
+    input {
+        display: inline;
+        flex: 1;
+        height: 40px;
+        padding: 0 24px;
+        border-radius: 5px 0 0 5px;
+        color: #3a3a3a;
+        border: 5px solid #FFF;
+        border-right: 0px;
+        float: left;
+    }
+}
 
+.buttonPesquisa {
+    float: left;
+    button {
+        float: left;
+        display: inline;
+        z-index: 99999;
+        width: 60px;
+        height: 63px;
+        background: #8ca4d2;
+        border-radius: 0px 5px 5px 0px;
+        border: 0;
+        color: #FFF;
+        font-size: 25px;
+        transition: background-color 0.2s;
+        &:hover {
+            background: #7a89a5;
+        }
+    }
+}
+
+.movieRowList {
+    padding-top: 100px;
+}
+
+.titleMovieRecomendado {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: -8px;
+    color: #1c4384;
+}
+
+.movieImgRecomendado {
+    width: 250px;
+    height: 360px;
+    img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 25px;
+    }
+}
+
+.genreMovieRecomendado {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: -18px;
+    margin-left: -8px;
+    color: #8ca4d2;
 }
