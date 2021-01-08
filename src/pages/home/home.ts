@@ -2,6 +2,7 @@ import { Component, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { FilmesProvider } from "../../providers/filmes/filmes";
+import {Observable } from 'rxjs'
 
 /**
  * Generated class for the HomePage page.
@@ -145,6 +146,7 @@ export class HomePage {
       "genero": "Aventura"
     },
   ]
+  images: any;
 
   constructor(
     public navCtrl: NavController, 
@@ -160,6 +162,19 @@ export class HomePage {
     
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad HomePage");
+    this.readData()
   }
+
+  readData() {
+    this.filmesProvider.readData().subscribe(data =>
+      console.log(data)
+    )
+  }
+  // geting() {
+  //   this.filmesProvider.getHomeList().subscribe(
+  //     data => {
+  //       this.images = data;
+  //     }
+  //   )
+  // }
 }
