@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { FilmesProvider } from "../../providers/filmes/filmes";
 import {Observable } from 'rxjs'
+import { FilmesModel } from "../../models/fillmes.model";
 
 /**
  * Generated class for the HomePage page.
@@ -148,8 +149,10 @@ export class HomePage {
   ]
   images: any;
 
+  filmesTv: FilmesModel = new FilmesModel();
+
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private filmesProvider: FilmesProvider,
@@ -159,16 +162,16 @@ export class HomePage {
         filme: ['']
       })
     }
-    
+
 
   ionViewDidLoad() {
     this.readData()
+    console.log(this.filmesTv)
   }
 
   readData() {
-    this.filmesProvider.readData().subscribe(data =>
-      console.log(data)
-    )
+    this.filmesProvider.readData()
+      .subscribe(data => this.filmesTv = data);
   }
   // geting() {
   //   this.filmesProvider.getHomeList().subscribe(

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment as ENV } from "../../environments/environment";
-import { Filmes } from "../../models/fillmes.model";
+import { FilmesModel } from "../../models/fillmes.model";
 
 const basicFetch = async (endpoint: string): Promise<any> => {
   const req = await fetch(`${ENV.API_BASE}${endpoint}`);
@@ -14,7 +14,7 @@ export class FilmesProvider {
   constructor(public http: HttpClient) {}
 
   readData() {
-    return this.http.get(`${ENV.API_BASE}discover/movie?api_key=107ffb6a281766739f3a422baef89b42`)
+    return this.http.get<FilmesModel>(`${ENV.API_BASE}discover/tv?api_key=${ENV.API_KEY}&language=pt-BR`)
   }
   // async ionViewDidLoad(): void{
   // }

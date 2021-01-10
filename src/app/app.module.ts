@@ -7,6 +7,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { FilmesProvider } from '../providers/filmes/filmes';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     MyApp,
@@ -14,6 +16,9 @@ import { FilmesProvider } from '../providers/filmes/filmes';
   imports: [
     BrowserModule,
     HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

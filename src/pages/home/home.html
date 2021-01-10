@@ -25,19 +25,19 @@
     </button>
     </div>
 
-    <div class="movieRowList">
+    <div class="movieRowList" *ngIf='filmesTv'>
         <h2>Recomendados</h2>
         <!-- paginationClickable="true" -->
-        <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" #mySlider>
-            <ion-slide *ngFor="let item of recomendados">
+        <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" #mySlider >
+            <ion-slide *ngFor="let filme of filmesTv.results">
                 <div class="movieImgRecomendado">
-                    <img src="{{item.urlFoto}}" />
+                  <img src= '{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
                 </div>
                 <ion-item class="titleMovieRecomendado" no-lines>
-                    {{item.titulo}}
+                    {{filme.name}}
                 </ion-item>
                 <ion-item class="genreMovieRecomendado" no-lines>
-                    {{item.genero}}
+                    {{filme.overview}}
                 </ion-item>
             </ion-slide>
         </ion-slides>
