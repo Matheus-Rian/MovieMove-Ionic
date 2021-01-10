@@ -13,9 +13,18 @@ const basicFetch = async (endpoint: string): Promise<any> => {
 export class FilmesProvider {
   constructor(public http: HttpClient) {}
 
+  // readData() {
+  //   return this.http.get<FilmesModel>(`${ENV.API_BASE}discover/tv?api_key=${ENV.API_KEY}&language=pt-BR`)
+  // }
+
   readData() {
-    return this.http.get<FilmesModel>(`${ENV.API_BASE}discover/tv?api_key=${ENV.API_KEY}&language=pt-BR`)
+    return this.http.get<FilmesModel>(`${ENV.API_BASE}discover/tv?with_genres=28&api_key=${ENV.API_KEY}&language=pt-BR`)
   }
+
+  // readData() {
+  //   return this.http.get<FilmesModel>(`${ENV.API_BASE}discover/tv?api_key=${ENV.API_KEY}&language=pt-BR`)
+  // }
+
   // async ionViewDidLoad(): void{
   // }
   // async getHomeList(): Promise<Filmes> {
