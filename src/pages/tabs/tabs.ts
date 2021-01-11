@@ -18,8 +18,7 @@ export class TabsPage {
   tab2Root = 'MinhaListaPage';
   tab3Root = 'BuscaPage';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');

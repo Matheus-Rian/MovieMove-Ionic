@@ -27,8 +27,8 @@
 
     <div class="movieRowList" *ngIf='recommendationMovie'>
         <h2>Recomendados</h2>
-        <!-- paginationClickable="true" -->
-        <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" #mySlider >
+
+        <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" paginationClickable="true" #mySlider >
             <ion-slide *ngFor="let filme of recommendationMovie.results">
                 <div class="movieImgRecomendado">
                   <img src= '{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
@@ -43,8 +43,8 @@
         </ion-slides>
 
         <h2>Em alta</h2>
-        <!-- paginationClickable="true" -->
-        <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" #mySlider>
+
+        <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
             <ion-slide *ngFor="let filme of topRatedMovie.results">
                 <div class="movieImgGeral">
                     <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
@@ -53,5 +53,30 @@
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
             </ion-slide>
         </ion-slides>
+
+        <h2>Comédia</h2>
+
+        <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
+            <ion-slide *ngFor="let filme of comedyMovie.results">
+                <div class="movieImgGeral">
+                    <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                </div>
+                <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
+                <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
+            </ion-slide>
+        </ion-slides>
+
+        <h2>Ação</h2>
+
+        <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
+            <ion-slide *ngFor="let filme of actionMovie.results">
+                <div class="movieImgGeral">
+                    <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                </div>
+                <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
+                <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
+            </ion-slide>
+        </ion-slides>
+
     </div>
 </ion-content>
