@@ -149,7 +149,8 @@ export class HomePage {
   ]
   images: any;
 
-  filmesTv: FilmesModel = new FilmesModel();
+  recommendationMovie: FilmesModel = new FilmesModel();
+  topRatedMovie: FilmesModel = new FilmesModel();
 
   constructor(
     public navCtrl: NavController,
@@ -165,19 +166,18 @@ export class HomePage {
 
 
   ionViewDidLoad() {
-    this.readData()
-    console.log(this.filmesTv)
+    this.movieRecommendation();
+    this.movieTopRated();
   }
 
-  readData() {
-    this.filmesProvider.readData()
-      .subscribe(data => this.filmesTv = data);
+  movieRecommendation() {
+    this.filmesProvider.movieRecommendation()
+      .subscribe(data => this.recommendationMovie = data);
   }
-  // geting() {
-  //   this.filmesProvider.getHomeList().subscribe(
-  //     data => {
-  //       this.images = data;
-  //     }
-  //   )
-  // }
+
+  movieTopRated() {
+    this.filmesProvider.movieTopRated()
+      .subscribe(data => this.topRatedMovie = data);
+  }
+
 }

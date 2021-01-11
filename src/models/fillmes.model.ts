@@ -8,7 +8,8 @@ export class FilmesModel {
       name: string
     }[]
     id: number
-    name: string
+    title?: string
+    name?: string
     origin_country: string[]
     original_language: string
     original_name: string
