@@ -14,9 +14,9 @@
     <div class="movieRowList" *ngIf="resultSearch.length > 0">
         <ion-list>
             <ion-item *ngFor="let filme of resultSearch">
-                <ion-avatar item-start class="poster">
-                <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path'>
-                </ion-avatar>
+                <ion-thumbnail item-start class="poster">
+                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path'>
+                </ion-thumbnail>
                 <h2>{{filme.name || filme.title}}</h2>
                 <p>{{filme.vote_average}}</p>
             </ion-item>
