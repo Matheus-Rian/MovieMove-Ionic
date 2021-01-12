@@ -1,8 +1,8 @@
 import { Component, ViewChild } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { FilmesProvider } from "../../providers/filmes/filmes";
-import { FilmesModel } from "../../models/fillmes.model";
+import { FilmesInt } from "../../interfaces/filmes.interface";
+import { Filme } from "../../interfaces/searchFilme.interface";
 
 /**
  * Generated class for the HomePage page.
@@ -18,25 +18,42 @@ import { FilmesModel } from "../../models/fillmes.model";
 })
 export class HomePage {
   @ViewChild("mySlider") mySlider: any;
+  
+  searchFilme: Array<Filme> = [];
+  resultSearch: Array<Filme> = [];
 
-  buscarFilmes: FormGroup;
-
-  recommendationMovie: FilmesModel = new FilmesModel();
-  topRatedMovie: FilmesModel = new FilmesModel();
-  actionMovie: FilmesModel = new FilmesModel();
-  comedyMovie: FilmesModel = new FilmesModel();
+  recommendationMovie: FilmesInt;
+  topRatedMovie: FilmesInt;
+  actionMovie: FilmesInt;
+  comedyMovie: FilmesInt;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private formBuilder: FormBuilder,
     private filmesProvider: FilmesProvider,
-    ) {
+    ) { }
 
-      this.buscarFilmes = this.formBuilder.group({
-        filme: ['']
+  // Realizar uma busca nos objetos de filmes
+  searchbarFilme(ev: any) {
+    
+    this.resultSearch = [];
+
+    const val = ev.target.value;
+    
+    //unir os objetos para fazer uma pesquisa na tela
+    this.searchFilme = []
+    this.searchFilme = this.searchFilme.concat(this.recommendationMovie.results)
+    this.searchFilme = this.searchFilme.concat(this.topRatedMovie.results)
+    this.searchFilme = this.searchFilme.concat(this.actionMovie.results)
+    this.searchFilme = this.searchFilme.concat(this.comedyMovie.results)
+
+    if (val && val.trim() != '') {
+      this.resultSearch = this.searchFilme.filter((item) => {
+        let title = item['title'] || item['name']
+        return (title.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
 
 
   ionViewDidLoad() {

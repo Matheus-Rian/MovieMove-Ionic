@@ -34,8 +34,17 @@
     }
 }
 
+.poster {
+    img{
+        border-radius:8px !important;
+        width:78px !important;
+        height: 78px !important;
+
+    }
+}
+
 .movieRowList {
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .titleMovieRecomendado {
