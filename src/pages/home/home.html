@@ -7,26 +7,30 @@
 
 <ion-content padding>
 
-    <div class="container">
-        <form [formGroup]="buscarFilmes">
-            <ion-item>
-                <ion-input [formControl]="buscarFilmes.controls['filme']" placeholder="Pesquise filmes aqui"></ion-input>
+    <!-- input de busca do ionic -->
+    <ion-searchbar (ionInput)="searchbarFilme($event)"></ion-searchbar>
+
+    <!-- Lista de resultado da busca -->
+    <div class="movieRowList" *ngIf="resultSearch.length > 0">
+        <ion-list>
+            <ion-item *ngFor="let filme of resultSearch">
+                <ion-thumbnail item-start class="poster">
+                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path'>
+                </ion-thumbnail>
+                <h2>{{filme.name || filme.title}}</h2>
+                <p>{{filme.vote_average}}</p>
             </ion-item>
-        </form>
-    </div>
-    <div class="buttonPesquisa">
-        <button type="submit">
-      <ion-icon name="search-outline"></ion-icon>
-    </button>
+          </ion-list>
     </div>
 
-    <div class="movieRowList" *ngIf='recommendationMovie'>
+    <!-- Lista de filmes -->
+    <div class="movieRowList" *ngIf="resultSearch.length == 0">
         <h2>Recomendados</h2>
 
         <ion-slides initialSlide="0" slidesPerView="1.2" freeMode="true" speed="1000" paginationClickable="true" #mySlider >
-            <ion-slide *ngFor="let filme of recommendationMovie.results">
+            <ion-slide *ngFor="let filme of recommendationMovie?.results">
                 <div class="movieImgRecomendado">
-                  <img src= '{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                  <img [src]= '"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
                 </div>
                 <ion-item class="titleMovieRecomendado" no-lines>
                     {{filme.name || filme.title}}
@@ -40,9 +44,9 @@
         <h2>Em alta</h2>
 
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
-            <ion-slide *ngFor="let filme of topRatedMovie.results">
+            <ion-slide *ngFor="let filme of topRatedMovie?.results">
                 <div class="movieImgGeral">
-                    <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
@@ -52,9 +56,9 @@
         <h2>Comédia</h2>
 
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
-            <ion-slide *ngFor="let filme of comedyMovie.results">
+            <ion-slide *ngFor="let filme of comedyMovie?.results">
                 <div class="movieImgGeral">
-                    <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
@@ -64,9 +68,9 @@
         <h2>Ação</h2>
 
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
-            <ion-slide *ngFor="let filme of actionMovie.results">
+            <ion-slide *ngFor="let filme of actionMovie?.results">
                 <div class="movieImgGeral">
-                    <img src='{{"https://image.tmdb.org/t/p/w300" + filme.poster_path }}' />
+                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
@@ -74,4 +78,5 @@
         </ion-slides>
 
     </div>
+    
 </ion-content>

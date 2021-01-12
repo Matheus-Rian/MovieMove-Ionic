@@ -13,7 +13,9 @@
         float: left;
     }
 }
-
+.searchbar-md .searchbar-input {
+    border: 1px solid #dedede;
+}
 .buttonPesquisa {
     float: left;
     button {
@@ -34,8 +36,14 @@
     }
 }
 
+.poster {
+    img{
+        border-radius:8px !important;
+    }
+}
+
 .movieRowList {
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .titleMovieRecomendado {
