@@ -1,20 +1,11 @@
-Generated template for the MovieListComponent component
-<div>
-  <h2>Em alta</h2>
-  <!-- paginationClickable="true" -->
-  <ion-slides
-    initialSlide="0"
-    slidesPerView="1.6"
-    freeMode="true"
-    speed="1000"
-    #mySlider
-  >
-    <ion-slide *ngFor="let item of ">
-      <div class="movieImgGeral">
-        <img src="{{item.urlFoto}}" />
-      </div>
-      <ion-item class="titleMovieGeral" no-lines> {{item.titulo}} </ion-item>
-      <ion-item class="genreMovieGeral" no-lines> {{item.genero}} </ion-item>
+<h2>Em alta</h2>
+
+<ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
+    <ion-slide *ngFor="let filme of topRatedMovie?.results">
+        <div class="movieImgGeral">
+            <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+        </div>
+        <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
+        <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
     </ion-slide>
-  </ion-slides>
-</div>
+</ion-slides>

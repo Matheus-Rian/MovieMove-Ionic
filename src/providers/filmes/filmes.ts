@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment as ENV } from "../../environments/environment";
 import { FilmesInt } from "../../interfaces/filmes.interface";
-import { FilmesModel } from "../../models/fillmes.model";
 
 @Injectable()
 export class FilmesProvider {
