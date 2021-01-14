@@ -13,12 +13,13 @@ import { Filme } from "../../interfaces/searchFilme.interface";
 
 @IonicPage()
 @Component({
+
   selector: "page-home",
   templateUrl: "home.html",
 })
 export class HomePage {
   @ViewChild("mySlider") mySlider: any;
-  
+
   searchFilme: Array<Filme> = [];
   resultSearch: Array<Filme> = [];
 
@@ -35,11 +36,11 @@ export class HomePage {
 
   // Realizar uma busca nos objetos de filmes
   searchbarFilme(ev: any) {
-    
+
     this.resultSearch = [];
 
     const val = ev.target.value;
-    
+
     //unir os objetos para fazer uma pesquisa na tela
     this.searchFilme = []
     this.searchFilme = this.searchFilme.concat(this.recommendationMovie.results)
