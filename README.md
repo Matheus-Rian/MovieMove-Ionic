@@ -1,6 +1,6 @@
 <h1 style="font-family: roboto;" align='center'>MovieMove 🚀</h1>
 
-<div style="margin: 0 0 10px 0;">
+<div aling='center' style="margin: 0 0 10px 0;">
 <img src='https://img.shields.io/static/v1?label=status&message=Desenvolvimento&color=ffd700&style=for-the-badge&logo=ionic'></img>
 <img src='https://img.shields.io/static/v1?label=MovieMove&message=1.0v&color=4169E1&style=for-the-badge&logo=mega'></img>
 <img src='https://img.shields.io/static/v1?label=Prox&message=1.1v&color=2E8B57&style=for-the-badge&logo=mega'></img>
@@ -46,7 +46,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Angular](https://angular.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-### :muscle: Contribuicões 
+### :muscle: Contribuições 
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Eduardo-Vieira"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/13556212?s=400&u=57b80ae71a6c8fcda75c78ffdd7b054b6b0b5535&v=4" width="100px;" alt=""/><br /><sub><b>Eduardo Vieira</b></sub></a><br /><a href="https://github.com/Eduardo-Vieira" title="EduardoVieira">👨‍🚀</a></td>
