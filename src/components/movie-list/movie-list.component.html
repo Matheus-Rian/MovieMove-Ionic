@@ -1,6 +1,7 @@
-<h2>Em alta</h2>
+<!-- <h2>Em alta</h2>
 
-<ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
+{{topRatedMovie.}}
+<ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true">
     <ion-slide *ngFor="let filme of topRatedMovie?.results">
         <div class="movieImgGeral">
             <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
@@ -8,4 +9,4 @@
         <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
         <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
     </ion-slide>
-</ion-slides>
+</ion-slides> -->

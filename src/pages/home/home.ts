@@ -62,6 +62,7 @@ export class HomePage {
     this.movieTopRated();
     this.movieAction();
     this.movieComedy();
+    console.log(this.searchFilme)
   }
 
   movieRecommendation() {

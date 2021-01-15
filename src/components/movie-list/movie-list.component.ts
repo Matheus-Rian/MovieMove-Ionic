@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FilmesInt } from '../../interfaces/filmes.interface';
 // import { } from ''
 
 @Component({
-  selector: 'movie-list',
+  selector: 'mov-movieList',
   templateUrl: 'movie-list.component.html'
 })
 export class MovieListComponent {
 
   text: string;
+  @Input() topRatedMovie: FilmesInt;
 
   constructor() {
-    console.log('Hello MovieListComponent Component');
+    console.log(this.topRatedMovie);
     this.text = 'Hello World';
   }
 

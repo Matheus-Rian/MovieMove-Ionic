@@ -42,7 +42,8 @@
         </ion-slides>
 
         <h2>Em alta</h2>
-
+        <!-- <mov-movieList *ngIf="topRatedMovie !== undefined" [topRatedMovie]="topRatedMovie"></mov-movieList> -->
+        <mov-movieList></mov-movieList>
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
             <ion-slide *ngFor="let filme of topRatedMovie?.results">
                 <div class="movieImgGeral">
