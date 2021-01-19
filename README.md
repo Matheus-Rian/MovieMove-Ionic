@@ -1,12 +1,15 @@
 <h1 style="font-family: roboto;" align='center'>MovieMove 🚀</h1>
 
-<div aling='center' style="margin: 0 0 10px 0;">
-<img src='https://img.shields.io/static/v1?label=status&message=Desenvolvimento&color=ffd700&style=for-the-badge&logo=ionic'></img>
-<img src='https://img.shields.io/static/v1?label=MovieMove&message=1.0v&color=4169E1&style=for-the-badge&logo=mega'></img>
-<img src='https://img.shields.io/static/v1?label=Prox&message=1.1v&color=2E8B57&style=for-the-badge&logo=mega'></img>
+<h1 style="font-family: roboto;" align='center'>
+  <img src='https://img.shields.io/static/v1?label=status&message=Desenvolvimento&color=ffd700&style=for-the-badge&logo=ionic'></img>
+  <img src='https://img.shields.io/static/v1?label=MovieMove&message=1.0v&color=4169E1&style=for-the-badge&logo=mega'></img>
+  <img src='https://img.shields.io/static/v1?label=Prox&message=1.1v&color=2E8B57&style=for-the-badge&logo=mega'></img>
+</h1>
 
-<img src='./readmeMedia/Ionic App (2).gif'></img>
-</div>
+<h1 style="font-family: roboto;" align='center'>
+  <img src='./readmeMedia/Ionic App (2).gif'></img>
+</h1>
+
 
 ### :pushpin: Objetivo
 
