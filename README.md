@@ -46,7 +46,7 @@ $ ionic serve
 - [x] Search Filmes
 - [ ] Lazy Loading
 - [ ] Componentizado
-:construction: Em breve mais features...
+#### :construction: Em breve mais features...
 
 ### ⚒️ Tecnologias
 
