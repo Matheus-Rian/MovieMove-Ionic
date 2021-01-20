@@ -25,11 +25,18 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ### :rocket: Instalando e executando
 
 ```bash
+
+# Clonar o projeto:
+$ git clone https://github.com/Matheus-Rian/MovieMove-Ionic.git
+
+# Entrar no diretório:
+$ cd MovieMove-Ionic
+  
 # Instalando dependências
-npm i
+$ npm i
 
 # Executando a aplicação em modo de desenvolvimento
-ionic serve
+$ ionic serve
 ``` 
 
 ### 🏁 Features 
