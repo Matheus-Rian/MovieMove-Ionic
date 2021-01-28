@@ -78,4 +78,4 @@ Made with ❤️ by Matheus Rian :point_right: Get in touch!
 
 ### :scroll: License
 
-This project is under license. See the [LICENSE] file (LICENSE.md) for more details.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
