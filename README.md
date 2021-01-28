@@ -1,7 +1,7 @@
 <h1 style="font-family: roboto;" align='center'>MovieMove 🚀</h1>
 
 <h1 style="font-family: roboto;" align='center'>
-  <img src='https://img.shields.io/static/v1?label=status&message=Desenvolvimento&color=ffd700&style=for-the-badge&logo=ionic'></img>
+  <img src='https://img.shields.io/static/v1?label=status&message=Development&color=ffd700&style=for-the-badge&logo=ionic'></img>
   <img src='https://img.shields.io/static/v1?label=MovieMove&message=1.0v&color=4169E1&style=for-the-badge&logo=mega'></img>
   <img src='https://img.shields.io/static/v1?label=Prox&message=1.1v&color=2E8B57&style=for-the-badge&logo=mega'></img>
 </h1>
@@ -11,52 +11,52 @@
 </h1>
 
 
-### :pushpin: Objetivo
+### :pushpin: Objective
 
-<p style="font-family: roboto;">Quem nunca passou horas procurando algum filme/série para assistir e no final desistiu por não encontrar nada? "Quem nunca, né minha filha". Foi daí que surgiu o <strong>MovieMove</strong>. O intuito do projeto é ajudar os usuários na escolha de um filme para assistir por meio de um sorteador.</p>
+<p style="font-family: roboto;">Who has never spent hours looking for a movie / series to watch and in the end gave up for not finding anything? "Who never, right, my daughter?". That's where <strong>MovieMove</strong> came from. The aim of the project is to help users in choosing a film to watch through a drawer.</p>
 
-### :hammer: Pré-requisitos 
+### :hammer: Requirements
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: 
+Before you begin, you will need to have the following tools installed on your machine:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+In addition, it is good to have an editor to work with the code as [VSCode](https://code.visualstudio.com/)
 
-
-### :rocket: Instalando e executando
+### :rocket: Installing and running
 
 ```bash
 
-# Clonar o projeto:
+# Clone the project:
 $ git clone https://github.com/Matheus-Rian/MovieMove-Ionic.git
 
-# Entrar no diretório:
+# Enter the directory:
 $ cd MovieMove-Ionic
   
-# Instalando dependências
+# Installing dependencies:
 $ npm i
 
-# Executando a aplicação em modo de desenvolvimento
+# Running the application in development mode:
 $ ionic serve
 ``` 
 
 ### 🏁 Features 
 
 - [X] Interface
-- [x] Integração com a API
-- [x] Search Filmes
+- [x] API integration
+- [x] Search Movies
 - [ ] Lazy Loading
-- [ ] Componentizado
-#### :construction: Em breve mais features...
+- [ ] Componentized
 
-### ⚒️ Tecnologias
+#### :construction: More features coming soon ...
 
-As seguintes ferramentas foram usadas na construção do projeto:
+### ⚒️ Technology
+
+The following tools were used in the construction of the project:
 
 - [Ionic](https://ionicframework.com/)
 - [Angular](https://angular.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-### :muscle: Contribuições 
+### :muscle: Contributions
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Eduardo-Vieira"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/13556212?s=400&u=57b80ae71a6c8fcda75c78ffdd7b054b6b0b5535&v=4" width="100px;" alt=""/><br /><sub><b>Eduardo Vieira</b></sub></a><br /><a href="https://github.com/Eduardo-Vieira" title="EduardoVieira">👨‍🚀</a></td>
@@ -64,7 +64,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </table>
 
 ---
-### :trident: Autor 
+### :trident: Author 
 
 <a href="https://www.linkedin.com/in/matheus-rian-19b81a183/">
  <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53922139?s=460&u=78916fa8ef722becba440780b3f5756e66507bb7&v=4" width="100px;" alt=""/>
@@ -72,10 +72,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <sub><b>Matheus Rian</b></sub></a> <a href="https://www.linkedin.com/in/matheus-rian-19b81a183/" title="MatheusRian">🚀</a>
 
 
-Feito com ❤️ por Matheus Rian :point_right: Entre em contato!
+Made with ❤️ by Matheus Rian :point_right: Get in touch!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Matheus-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/matheus-rian-19b81a183/) [![Gmail Badge](https://img.shields.io/badge/-souzamatheusrian@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:souzamatheusrian@gmail.com)](souzamatheusrian@gmail.com)
 
-### :scroll: Licença
+### :scroll: License
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+This project is under license. See the [LICENSE] file (LICENSE.md) for more details.
