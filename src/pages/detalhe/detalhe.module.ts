@@ -9,5 +9,8 @@ import { DetalhePage } from './detalhe';
   imports: [
     IonicPageModule.forChild(DetalhePage),
   ],
+  exports: [
+    DetalhePage,
+  ]
 })
 export class DetalhePageModule {}
