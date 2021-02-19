@@ -19,7 +19,6 @@ import { DetalhePage } from "../detalhe/detalhe";
   templateUrl: "home.html",
 })
 export class HomePage {
-  pushPage: any
   @ViewChild("mySlider") mySlider: any;
 
   searchFilme: Array<Filme> = [];
@@ -35,7 +34,6 @@ export class HomePage {
     public navParams: NavParams,
     private filmesProvider: FilmesProvider,
     ) { 
-      this.pushPage = DetalhePage
     }
 
   // Realizar uma busca nos objetos de filmes
@@ -90,9 +88,10 @@ export class HomePage {
   }
 
   nextPage(filme: FilmesInt) {
+    let dataFilme = filme
+    console.log(dataFilme)
     this.navCtrl.push('DetalhePage', {
-      id: 1,
-      name: 'Dale'
+      'filme': dataFilme
     })
   }
 }

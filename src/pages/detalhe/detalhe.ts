@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FilmesInt } from '../../interfaces/filmes.interface';
 
 /**
  * Generated class for the DetalhePage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetalhePage {
 
+  homeData: FilmesInt;
+  detalheData: FilmesInt;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.homeData = this.navParams.get('filme');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetalhePage');
+    this.detalheData = this.homeData;
+    console.log(this.detalheData)
   }
+
 
 }
