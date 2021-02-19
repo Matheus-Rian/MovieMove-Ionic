@@ -88,4 +88,11 @@ export class HomePage {
     this.filmesProvider.movieComedy()
       .subscribe(data => this.comedyMovie = data)
   }
+
+  nextPage(filme: FilmesInt) {
+    this.navCtrl.push('DetalhePage', {
+      id: 1,
+      name: 'Dale'
+    })
+  }
 }

@@ -14,8 +14,5 @@ import { HomePage } from './home';
     DetalhePageModule,
     IonicPageModule.forChild(HomePage),
   ],
-  entryComponents: [
-    DetalhePage
-  ]
 })
 export class HomePageModule {}
