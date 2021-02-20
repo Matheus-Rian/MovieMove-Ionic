@@ -16,16 +16,24 @@ import { FilmesInt } from '../../interfaces/filmes.interface';
 })
 export class DetalhePage {
 
-  homeData: FilmesInt;
-  detalheData: FilmesInt;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.homeData = this.navParams.get('filme');
-  }
+  overview: string;
+  idFilme: number;
+  noteFilme: any;
+  titleFilme: string;
+  voteAverage: number;
+  posterPath: string;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.overview = this.navParams.get('overview');
+    this.titleFilme = this.navParams.get('title');
+    this.voteAverage = this.navParams.get('voteAverage');
+    this.posterPath = this.navParams.get('posterPath');
+  }
+  
   ionViewDidLoad() {
+    debugger
+    console.log(this.posterPath)
     console.log('ionViewDidLoad DetalhePage');
-    this.detalheData = this.homeData;
-    console.log(this.detalheData)
   }
 
 

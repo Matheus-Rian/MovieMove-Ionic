@@ -87,11 +87,15 @@ export class HomePage {
       .subscribe(data => this.comedyMovie = data)
   }
 
-  nextPage(filme: FilmesInt) {
-    let dataFilme = filme
-    console.log(dataFilme)
+  nextPage(id, title, overview, voteAverage, posterPath) {
     this.navCtrl.push('DetalhePage', {
-      'filme': dataFilme
+      'id': id,
+      'title': title,
+      'overview': overview,
+      'voteAverage': voteAverage,
+      'posterPath': posterPath
     })
   }
 }
+
+// filme.id, filme.title || filme.name, filme.overview

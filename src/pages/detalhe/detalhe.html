@@ -15,12 +15,14 @@
       <div class="iconsMovie">
           <button><ion-icon name="arrow-back-outline"></ion-icon></button>
           <button><ion-icon name="bookmark-outline"></ion-icon></button>
+          <img [src]='"https://image.tmdb.org/t/p/w300" + posterPath'>
+          <!-- <img src="" alt=""> -->
       </div>
   </div>
   <div class="moreInformationMove">
       <div class="titleAndNote">
           <div>
-              <p padding-left class="titleMovieRecomendado" no-lines>Filme</p>
+              <p padding-left class="titleMovieRecomendado" no-lines>{{titleFilme}}</p>
               <p padding-left class="genreMovieRecomendado" no-lines>Gênero</p>
           </div>
 
@@ -30,10 +32,10 @@
               </a>
           </div>
 
-          <p padding-right class="note">8.9</p>
+          <p padding-right class="note">{{voteAverage}}</p>
       </div>
 
-      <!-- <p padding class='description' *ngIf='detalheData.results !== undefined'>{{detalheData.results?.overview}}</p> -->
+      <p padding class='description'>{{overview}}</p>
       <div padding class='addAndRemoveList'>
           <button><ion-icon name="add-outline"></ion-icon>Lista</button>
       </div>
