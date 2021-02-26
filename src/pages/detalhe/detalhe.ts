@@ -36,5 +36,11 @@ export class DetalhePage {
     console.log('ionViewDidLoad DetalhePage');
   }
 
+  previousPage() {
+    this.navCtrl.pop();
+  }
+
+  
 
 }
+

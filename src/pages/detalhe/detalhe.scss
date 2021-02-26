@@ -1,16 +1,12 @@
 .backgroundMovie {
-    // z-index: 1;
-    // position: relative;
     height: 50%;
     width: 100%;
-    // margin-bottom: 10%;
-    // url("https://sm.ign.com/t/ign_br/screenshot/default/narutinho_rq9u.1280.jpg");
     background: linear-gradient( 180deg, rgba(0, 0, 0, 0.76) 0%, rgba(4, 4, 4, 0.747333) 28.65%, rgba(255, 255, 255, 0) 100%) !important;
     .iconsMovie {
-        // z-index: 9999;
         display: flex;
         justify-content: space-between;
         button {
+            z-index: 9999;
             font-size: 40px;
             background: transparent;
             color: #fff;

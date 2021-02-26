@@ -5,40 +5,46 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-toolbar color="primary">
-      <ion-title>Detalhe</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>Detalhe</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="backgroundMovie">
-      <div class="iconsMovie">
-          <button><ion-icon name="arrow-back-outline"></ion-icon></button>
-          <button><ion-icon name="bookmark-outline"></ion-icon></button>
-          <!-- <img src="" alt=""> -->
+    <div class="backgroundMovie">
+        <div class="iconsMovie">
+            <button (click)="previousPage()">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </button>
+            <button>
+                <ion-icon name="bookmark-outline"></ion-icon>
+            </button>
+            <!-- <img src="" alt=""> -->
         </div>
         <img class='imgMovie' [src]='"https://image.tmdb.org/t/p/w300" + posterPath'>
-  </div>
-  <div class="moreInformationMove">
-      <div class="titleAndNote">
-          <div>
-              <p padding-left class="titleMovieRecomendado" no-lines>{{titleFilme}}</p>
-              <p padding-left class="genreMovieRecomendado" no-lines>Gênero</p>
-          </div>
+    </div>
+    <div class="moreInformationMove">
+        <div class="titleAndNote">
+            <div>
+                <p padding-left class="titleMovieRecomendado" no-lines>{{titleFilme}}</p>
+                <p padding-left class="genreMovieRecomendado" no-lines>Gênero</p>
+            </div>
 
-          <!-- <div class="play">
+            <!-- <div class="play">
               <a href='#' class='buttonPlay'>
                   <ion-icon name="play" class='icon-play'></ion-icon>
               </a>
           </div> -->
 
-          <p padding-right class="note">{{voteAverage}}</p>
-      </div>
+            <p padding-right class="note">{{voteAverage}}</p>
+        </div>
 
-      <p padding class='description'>{{overview}}</p>
-      <div padding class='addAndRemoveList'>
-          <button><ion-icon name="add-outline"></ion-icon>Lista</button>
-      </div>
+        <p padding class='description'>{{overview}}</p>
+        <div padding class='addAndRemoveList'>
+            <button (click)="list()">
+                <ion-icon name="add-outline"></ion-icon>Lista
+            </button>
+        </div>
 
-  </div>
+    </div>
 </ion-content>
