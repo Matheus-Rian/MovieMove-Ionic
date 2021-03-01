@@ -9,8 +9,6 @@ import { MyApp } from './app.component';
 import { FilmesProvider } from '../providers/filmes/filmes';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DetalhePage } from '../pages/detalhe/detalhe';
-import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
 @NgModule({
   declarations: [
     MyApp,

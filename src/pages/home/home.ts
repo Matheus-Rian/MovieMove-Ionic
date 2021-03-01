@@ -3,15 +3,6 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { FilmesProvider } from "../../providers/filmes/filmes";
 import { FilmesInt } from "../../interfaces/filmes.interface";
 import { Filme } from "../../interfaces/searchFilme.interface";
-import { DetalhePage } from "../detalhe/detalhe";
-
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
 
