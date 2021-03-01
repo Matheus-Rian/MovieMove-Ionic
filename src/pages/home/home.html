@@ -15,12 +15,16 @@
         <ion-list>
             <ion-item *ngFor="let filme of resultSearch">
                 <ion-thumbnail item-start class="poster">
-                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path'>
+                    <a (click)="nextPage(filme.id, filme.title || filme.name, filme.overview, filme.vote_average, filme.backdrop_path) ">
+                        <img [src]= '"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    </a>
                 </ion-thumbnail>
-                <h2>{{filme.name || filme.title}}</h2>
-                <p>{{filme.vote_average}}</p>
+                <a (click)="nextPage(filme.id, filme.title || filme.name, filme.overview, filme.vote_average, filme.backdrop_path) ">
+                    <h2>{{filme.name || filme.title}}</h2>
+                    <p>{{filme.vote_average}}</p>
+                </a>
             </ion-item>
-          </ion-list>
+        </ion-list>
     </div>
 
     <!-- Lista de filmes -->
@@ -49,7 +53,9 @@
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
             <ion-slide *ngFor="let filme of topRatedMovie?.results">
                 <div class="movieImgGeral">
-                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    <a (click)="nextPage(filme.id, filme.title || filme.name, filme.overview, filme.vote_average, filme.backdrop_path) ">
+                        <img [src]= '"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    </a>
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
@@ -61,7 +67,9 @@
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
             <ion-slide *ngFor="let filme of comedyMovie?.results">
                 <div class="movieImgGeral">
-                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    <a (click)="nextPage(filme.id, filme.title || filme.name, filme.overview, filme.vote_average, filme.backdrop_path) ">
+                        <img [src]= '"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    </a>
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
@@ -73,7 +81,9 @@
         <ion-slides initialSlide="0" slidesPerView="1.6" freeMode="true" speed="1000" paginationClickable="true" #mySlider>
             <ion-slide *ngFor="let filme of actionMovie?.results">
                 <div class="movieImgGeral">
-                    <img [src]='"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    <a (click)="nextPage(filme.id, filme.title || filme.name, filme.overview, filme.vote_average, filme.backdrop_path) ">
+                        <img [src]= '"https://image.tmdb.org/t/p/w300" + filme.poster_path' />
+                    </a>
                 </div>
                 <ion-item class="titleMovieGeral" no-lines> {{filme.name || filme.title}} </ion-item>
                 <ion-item class="genreMovieGeral" no-lines> {{filme.vote_average}} </ion-item>
