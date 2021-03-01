@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FilmesInt } from '../../interfaces/filmes.interface';
-
-/**
- * Generated class for the DetalhePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-detalhe',
@@ -16,9 +7,10 @@ import { FilmesInt } from '../../interfaces/filmes.interface';
 })
 export class DetalhePage {
 
+  isAddList: boolean = false;
+
   overview: string;
   idFilme: number;
-  noteFilme: any;
   titleFilme: string;
   voteAverage: number;
   posterPath: string;
@@ -31,16 +23,15 @@ export class DetalhePage {
   }
   
   ionViewDidLoad() {
-    debugger
-    console.log(this.posterPath)
-    console.log('ionViewDidLoad DetalhePage');
+
   }
 
   previousPage() {
     this.navCtrl.pop();
   }
 
-  
-
+  list() {
+    this.isAddList = !this.isAddList;
+  }
 }
 
