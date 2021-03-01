@@ -70,16 +70,44 @@
 }
 
 .addAndRemoveList {
+    width: 100%;
     margin-top: -25px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
     ion-icon {
         font-size: 35px;
         font-weight: 600;
     }
-    button {
+
+    .buttonList {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        background-color: #22883e;
+        background: #22883e;
+        height: 56px;
+        width: 40%;
+        border-radius: 10px;
+        border: 0;
+        font-size: 25px;
+        color: #fff;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+
+    .buttonPlay {
+
+        ion-icon {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #162320;
         height: 56px;
         width: 40%;
         border-radius: 10px;
