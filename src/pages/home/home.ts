@@ -1,6 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { FilmesProvider } from "../../providers/filmes/filmes";
+import { FilmesProvider } from "../../providers/filmes/filmes.provider";
 import { FilmesInt } from "../../interfaces/filmes.interface";
 import { Filme } from "../../interfaces/searchFilme.interface";
 @IonicPage()
