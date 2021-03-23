@@ -17,22 +17,26 @@ export class DetalhePage {
   titleFilme: string;
   voteAverage: number;
   posterPath: string;
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public listProvider: ListProvider) {
     this.overview = this.navParams.get('overview');
     this.titleFilme = this.navParams.get('title');
     this.voteAverage = this.navParams.get('voteAverage');
     this.posterPath = this.navParams.get('posterPath');
   }
-  
+
   ionViewDidLoad() {
 
   }
-  
+
   previousPage() {
     this.navCtrl.pop();
   }
-  
+
+  openUrl() {
+    window.open('https://netflix.com', '_system');
+  }
+
   list() {
     this.isAddList = !this.isAddList;
     // if(this.isAddList) {
